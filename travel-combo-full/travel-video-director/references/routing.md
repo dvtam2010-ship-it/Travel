@@ -10,7 +10,7 @@ phương án.
 | Tín hiệu ở từng beat | Loại | Xử lý |
 |---|---|---|
 | Beat thường, có footage thật (mặc định) | `[FOOTAGE]` | M: B2 viết query → B3 săn footage, eye-check, provenance |
-| Cần giải thích bằng đồ họa: bản đồ, tuyến đường, so sánh giá, cảnh báo scam, "7 mistakes", timeline | `[EXPLAIN]` | V: gen `editorial_collage` (Steps 4–8) |
+| Cần giải thích bằng đồ họa: bản đồ, tuyến đường, so sánh giá, cảnh báo scam, "7 mistakes", timeline | `[EXPLAIN]` | V: gen `editorial_collage` (Steps 4–8). **Riêng bản đồ:** dựng bằng `travel-vox-combo/scripts/render_vietnam_map.py` theo chuẩn V1.1 (`../travel-vox-combo/references/vietnam-map.md`); beat nào có chỉ dẫn địa lý trong narration → bắt buộc animation vẽ chỉ đường |
 | Săn 2 lần không có footage: nơi hẻo lánh, sự kiện quá khứ, concept trừu tượng | `[GEN]` | V: gen AI video (Steps 4–9) theo **phương án R** — tìm ảnh bối cảnh thật → ảnh AI giống thật nhất (side-by-side) → image-to-video; áp frame QA + audio QA |
 | Cần dãy scene có narrator/style đồng nhất tuyệt đối | `[GEN]` | V: gen AI với cùng voice id + continuity notes |
 | Beat về món ăn | `[FOOTAGE]` ưu tiên | M: B3 săn; thiếu → `[GEN]` + QA món ăn (`qa-food-travel.md`): reference photo thật trước, image-to-video từ ref thật, cấm bịa |

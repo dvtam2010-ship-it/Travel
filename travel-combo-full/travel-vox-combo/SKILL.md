@@ -1,7 +1,7 @@
 ---
 name: travel-vox-combo
 description: >
-  Travel vox combo V1.2: create English-narrated Vox-inspired short-form travel explainers about Vietnam
+  Travel vox combo V1.3: create English-narrated Vox-inspired short-form travel explainers about Vietnam
   for foreign visitors, generating video with Muse video (media.generate_video) instead of Google Flow.
   Use when the user wants a Vietnam travel guide video, TikTok, YouTube Short, or similar explainer
   produced end to end. Combine editorial paper-collage explanation with realistic, culturally specific
@@ -10,7 +10,7 @@ description: >
   Truong Sa (Spratly Islands) in geographically appropriate South China Sea positions.
 ---
 
-# Travel Vox Combo Director — V1.2
+# Travel Vox Combo Director — V1.3
 
 Turn two required inputs — **title/topic** and **total duration** — into a finished short-form production workflow:
 
@@ -209,3 +209,4 @@ The result should feel like a retention-focused editorial travel explainer, not 
 - V1 (2026-10-05): TTS voiceover pipeline (`scripts/make_voiceover.py` + `references/voiceover.md`, mix with ducking in `scripts/assemble_clips.py`) + frame-based image QA system (`scripts/qa_frames.py` + `references/frame-qa.md`).
 - V1.1 (2026-10-05): audio cleanup in assembler (highpass + FFT denoise on hissy Muse video beds, deep sidechain ducking ratio 20) + audio QA system for background beds and final mix (`scripts/qa_audio.py` + `references/audio-qa.md`, wired into Steps 9 and 11).
 - V1.2 (2026-10-05): Vietnamese currency QA (`references/vietnam-currency.md`): `shows_currency` + `currency_detail` schema fields, validator requirement, currency checklist in `qa_frames.py`, portrait-dignity rules for Hồ Chí Minh in `frame-qa.md` (no close-ups, never distorted/disrespected).
+- V1.3 (2026-10-17): chuẩn bản đồ V1.1 (`references/vietnam-map.md`): script dựng bản đồ đẹp `scripts/render_vietnam_map.py` (PIL + Natural Earth 50m, ocean gradient, nước lân cận mờ, pill label tự tránh đè) + animation vẽ chỉ đường bằng code (đường Catmull-Rom tự vẽ dần, badge số pop, nhãn tổng km) bắt buộc cho mọi beat có chỉ dẫn địa lý; animation code-rendered deterministic, không phải AI (tuân thủ lệnh cấm 12/10/2026).
